@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>ixiQuarks registration</title>
+	<link rel="stylesheet" type="text/css" href="../style.css" />
+	
+	<script language="JavaScript" type="text/javascript">
+  		function checkReturn(evt) {
+			var evt  = (evt) ? evt : ((event) ? event : null);
+			var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+			if ((evt.keyCode == 13) && (node.type=="text")) {return false;}
+  		}
+  document.onkeypress = checkReturn;
+</script>
+
+</head>
+
+<body>
+
+  <form action="http://www.ixi-software.net/cgi-bin/ixiQuarksForm.pl" method="POST">
+  <input type="hidden" name="subject" value="[ixi] quarks" />
+  <input type="hidden" name="recipient" value="ixi" />
+  <input type="hidden" name="redirect" value="http://www.ixi-audio.net/content/download/ixiquarks/thanks.html" />
+  
+    <table>
+  	<td width="230"><img src="../1.gif" width="230" height="1"></td>
+	  <td width="600" valign="top"> 
+        <!--               THE TITLE                 -->
+        <p><img src="../1.gif" width="600" height="1" /></p>
+        <p><strong><font size="3">ixiQuarks: registering your email for communication</font></strong></p> 
+        <p>The ixiQuarks are part of our research and we'd love to be able to 
+          ask you - the user - a few questions at some point in the future. Please 
+          fill in the following form and help us to understand the issues of digital 
+          instruments a bit better.</p>
+        <p>&nbsp;</p>
+        <!--               PERSONAL DETAILS                 -->
+_____________________________________________________________________________
+  <br><br>
+  <p><strong><font color="#006699">Personal details</font></strong></p>
+  
+
+  
+  <table>
+    <tr> 
+      <td width="220" height="26">Name (optional)</td>
+      <td width="320"><input type="text" name="name" size="35" /></td>
+    </tr>
+    <tr> 
+            <td height="32">Email</td>
+      <td><input type="text" name="email" size="35" /></td>
+    </tr>
+    <tr> 
+            <td height="32">Nationality (optional)</td>
+      <td><input type="text" name="nationality" size="35" /></td>
+    </tr>
+    <tr> 
+            <td height="32">Gender (optional)</td>
+      <td><input type="text" name="gender" size="35" /></td>
+    </tr>
+    <tr> 
+            <td height="32">Age (optional)</td>
+      <td><input type="text" name="age" size="35" /></td>
+    </tr>
+    <tr> 
+            <td height="32">Profession/vocation (optional)</td>
+      <td><input type="text" name="profession" size="35" /></td>
+    </tr>
+    <tr> 
+            <td height="32">Academic institution (if any - optional)</td>
+      <td><input type="text" name="institution" size="35" /></td>
+    </tr>
+    <tr> 
+            <td height="32">Location (optional)</td>
+      <td><input type="text" name="location" size="35" /></td>
+    </tr>
+	<tr> 
+      <td height="32">Project website (optional)</td>
+      <td><input type="text" name="project_website" size="35" /></td>
+    </tr>
+	<tr> 
+            <td height="32">Where did you hear about ixiQuarks?</td>
+      <td><input type="text" name="where_hear_about_survey" size="35" /></td>
+    </tr>
+    
+  </table>
+  <br>
+  
+    <!--               OTHER                 -->
+_____________________________________________________________________________
+  <br><br>
+
+  <p><strong><font color="#006699">Comments...</font></strong></p>
+<table>
+    <tr> 
+            <td width="540"  height="42"> Have you got any other comments on ixiQuarks 
+              that you'd like to tell us about now?</td>
+    </tr>
+    <tr> 
+      <td> <textarea name="forgot_question_other_comment" cols="73" rows="6" onfocus="if(this.value=='other comments')this.value='';"></textarea> 
+      </td>
+    </tr>
+
+  </table>
+
+  <p>&nbsp;</p>
+  
+  <!-- THE SUBMIT BUTTON -->
+  
+  <table>
+    <tr> 
+      <td colspan="2"><input type="submit"  text="submit"/></td>
+    </tr>
+  </table>
+
+	</td>
+  	  <td width="*"></td>
+
+  </table>
+  
+</form>
+
+</body>
+</html>

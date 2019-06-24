@@ -1,0 +1,131 @@
+BODY {
+	color: #494949;;
+	/*font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;*/
+	font-family: "courier new", courier, "Andale Mono"; 
+	font-size: 14px;
+}
+
+/*body { font-family: "courier new", courier, "Andale Mono"; line-height: 1.3; }*/
+
+
+h3{
+	font-weight: bold;
+	font-size: 29px;
+	padding: 15px 0 15px 0;
+	margin: 0;
+}
+
+h4{
+	font-weight: bold;
+	font-size: 20px;
+	padding: 15px 0 0px 0;
+	margin: 0;
+}
+
+a {color: #202020;}
+
+a:hover {
+	color: #C0C0C0;
+	background : #202020;
+}
+
+
+
+.ES{}
+.EU{color: #8B6914;}
+.EN{color: #A52A2A;}
+.noclear{float: left;}
+
+
+#titulo {
+	/*text-align: center;*/ /*to center on IE*/
+	font-weight: bold;
+	font-size: 100px;
+}
+#titulo a{ text-decoration: none; }
+
+#descripcion, #ediciones, #organiza {padding-top: 20px;}
+
+#organiza a{ padding-left: 10px }
+#organiza{float: left; clear: left;}
+
+#ediciones ul {
+	list-style-type: none; /* for IE */
+	margin: 0px 0px 0px 5px;
+	padding: 0;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#ediciones ul li, #ediciones_footer ul li{ 
+	display: inline; 
+	list-style: none; 
+	margin: 5px;
+ padding: 0;
+} /* no bulletpoints */
+
+	#ediciones_footer{
+			font-size: 12px;
+	font-weight: bold;
+		}
+		
+		#ediciones_footer ul{
+				margin-left: 0px;
+	padding-left: 0px;
+	}
+	#ediciones_footer ul li .first{
+				margin-left: 0px;
+	padding-left: 0px;
+	}
+	
+	#artista{
+		padding-top: 22px;
+		font-size: 16px;
+		/*min-height: 150px;*/
+		clear: left;
+		}
+			#artista a{
+		font-size: 15px;
+		text-decoration: none;
+		}
+		
+			#artista #text{
+		padding-top: 10px;
+		font-size: 14px;
+		}
+		
+	#artista img{
+			float: left;
+			padding: 0 10px 10px 0;
+			width: 280px;
+			height: 210px;
+		}
+		
+		
+		
+	.nombre{
+		font-size: 19px;
+		text-decoration: underline;
+		}
+
+#avance2014{
+	margin: 20px 0px 20px 40px;
+	padding: 8px;
+	width:480px;
+		font-size: 20px;
+	font-weight: bold;
+	color: #202020;
+	background : #20FF20;
+	}
+	
+
+
+#imagen {
+	padding: 15px; 	
+	float: right;
+	clear: both;
+}
+
+
+
+

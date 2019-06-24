@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>What is your favorite plant ?</title>
+ <link rel="stylesheet" type="text/css" href="/css/nms.css" />
+</head>
+<body>
+ <form method="post" action="/cgi-bin/NMSFormMail.pl">
+  <input type="hidden" name="subject" value="Favorite Plant" />
+  <input type="hidden" name="recipient" value="plants" />
+  <table>
+   <tr>
+    <td>What is your name ?</td>
+    <td><input type="text" name="realname" /></td>
+   </tr>
+   <tr>
+    <td>What is your email address ?</td>
+    <td><input type="text" name="email" /></td>
+   </tr>
+   <tr>
+    <td>What is your favorite plant ?</td>
+    <td><input type="text" name="plant" /></td>
+   </tr>
+   <tr>
+    <td colspan="2"><input type="submit" /></td>
+   </tr>
+  </table>
+ </form>
+</body>
+</html>

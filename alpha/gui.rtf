@@ -1,0 +1,271 @@
+{\rtf1\mac\ansicpg10000\cocoartf824\cocoasubrtf440
+{\fonttbl\f0\fnil\fcharset77 Monaco;\f1\fswiss\fcharset77 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green27\blue185;\red173\green20\blue13;\red96\green96\blue96;
+}
+{\info
+{\author thor magnusson}
+{\*\company ixi software}
+{\*\copyright thor magnusson}}\margl1440\margr1440\vieww11400\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\ql\qnatural
+
+\f0\fs18 \cf0 \
+*gui \{
+\f1\fs24 \
+	
+\f0\fs18 \cf2 var\cf0  classes, win, lists, listviews, numcols=5, selecteditem, node, newlist, curkey, selectednodes;
+\f1\fs24 \
+	\
+	
+\f0\fs18 \cf3 // Call to ensure the tree has been built
+\f1\fs24 \cf0 \
+	
+\f0\fs18 \cf2 this\cf0 .tree;
+\f1\fs24 \
+	\
+	
+\f0\fs18 \cf3 // Now for a GUI
+\f1\fs24 \cf0 \
+	
+\f0\fs18 win = \cf2 GUI\cf0 .window.new(\cf4 "Help browser"\cf0 , \cf2 Rect\cf0 (128, 264, 200*numcols, 500)); \cf3 // SCWindow
+\f1\fs24 \cf0 \
+	\
+	
+\f0\fs18 lists = \cf2 Array\cf0 .newClear(numcols);
+\f1\fs24 \
+	
+\f0\fs18 lists[0] = tree.keys(\cf2 Array\cf0 ).collect(\cf2 _\cf0 .asString).sort;
+\f1\fs24 \
+	
+\f0\fs18 selectednodes = \cf2 Array\cf0 .newClear(numcols);
+\f1\fs24 \
+	\
+	
+\f0\fs18 \cf3 // SCListView
+\f1\fs24 \cf0 \
+	
+\f0\fs18 listviews = (0..numcols-1).collect(\{\cf2 |index|
+\f1\fs24 \cf0 \
+		
+\f0\fs18 \cf2 GUI\cf0 .listView.new(win, \cf2 Rect\cf0 (10 + (index * 200), 5, 180, 480)).action_(\{ \cf2 |lv|
+\f1\fs24 \cf0 \
+			
+\f0\fs18 \cf2 var\cf0  selectedstr = lv.items[lv.value];
+\f1\fs24 		\
+
+\f0\fs18 \
+
+\f1\fs24 			
+\f0\fs18 if(selectedstr[0..1]!=\cf4 "->"\cf0 , \{
+\f1\fs24 \
+				
+\f0\fs18 \cf3 // We've clicked on a category or on a class
+\f1\fs24 \cf0 \
+				
+\f0\fs18 if(lv.items.size != 0, \{\'ca
+\f1\fs24 \
+					
+\f0\fs18 selecteditem = lists[index][lv.value];
+\f1\fs24 \
+					
+\f0\fs18 if(listviews[index+1].isNil.not, \{
+\f1\fs24 \
+						
+\f0\fs18 \cf3 // Clear the GUI for the subsequent panels
+\f1\fs24 \cf0 \
+						
+\f0\fs18 listviews[index+1..].do(\cf2 _\cf0 .items=#[]);
+\f1\fs24 \
+						\
+						
+\f0\fs18 \cf3 // Get the current node, from the parent node
+\f1\fs24 \cf0 \
+						
+\f0\fs18 node = if(index==0, tree, \{selectednodes[index-1]\})[selecteditem];
+\f1\fs24 \
+						
+\f0\fs18 curkey = selecteditem;
+\f1\fs24 \
+						
+\f0\fs18 selectednodes[index] = node;
+\f1\fs24 \
+						\
+						
+\f0\fs18 if(node.isNil, \{
+\f1\fs24 \
+							
+\f0\fs18 \cf3 // We have a "leaf" (class or helpdoc), since no keys found
+\f1\fs24 \cf0 \
+							\
+							
+\f0\fs18 lists[index+1] = #[];
+\f1\fs24 \
+							
+\f0\fs18 listviews[index+1].items =\'ca
+\f1\fs24 \
+								
+\f0\fs18 #[\cf4 "->Help"\cf0 ] ++ if(curkey.asSymbol.asClass.isNil, \cf2 nil\cf0 , #[\cf4 "->Source"\cf0 ]);
+\f1\fs24 \
+									\
+							
+\f0\fs18 \cf3 // The "selectednodes" entry for the leaf, is the path to the helpfile (or "")
+\f1\fs24 \cf0 \
+							
+\f0\fs18 selectednodes[index] = if(index==0, \{tree\}, \{selectednodes[index-1]\})
+\f1\fs24 \
+										
+\f0\fs18 [curkey.asSymbol.asClass ? curkey.asSymbol];
+\f1\fs24 \
+									\
+						
+\f0\fs18 \}, \{
+\f1\fs24 \
+							
+\f0\fs18 \cf3 // We have a category on our hands
+\f1\fs24 \cf0 \
+							
+\f0\fs18 lists[index+1] = node.keys(\cf2 Array\cf0 ).collect(\cf2 _\cf0 .asString).sort(\{\cf2 |a,b|\cf0 \'ca
+\f1\fs24 \
+								
+\f0\fs18 a[0]==$[ || (b[0]!=$[ && (a <= b))
+\f1\fs24 \
+								
+\f0\fs18 \});
+\f1\fs24 \
+							
+\f0\fs18 listviews[index+1].items = lists[index+1];
+\f1\fs24 \
+						
+\f0\fs18 \});
+\f1\fs24 \
+						
+\f0\fs18 listviews[index+1].valueAction_(0);
+\f1\fs24 \
+						\
+						
+\f0\fs18 selectednodes[index+2 ..] = \cf2 nil\cf0 ; \cf3 // Clear out the now-unselected
+\f1\fs24 \cf0 \
+					
+\f0\fs18 \});
+\f1\fs24 \
+				
+\f0\fs18 \});
+\f1\fs24 \
+			
+\f0\fs18 \});
+\f1\fs24 \
+		
+\f0\fs18 \});
+\f1\fs24 \
+	
+\f0\fs18 \});
+\f1\fs24 \
+	\
+	
+\f0\fs18 listviews[0].items = lists[0];
+\f1\fs24 \
+	\
+	
+\f0\fs18 \cf3 // Add keyboard navigation between columns
+\f1\fs24 \cf0 \
+	
+\f0\fs18 listviews.do(\{ \cf2 |lv, index|\cf0  \cf3 // SCView
+\f1\fs24 \cf0 \
+		
+\f0\fs18 lv.keyDownAction_(\{\cf2 |view,char,modifiers,unicode,keycode|
+\f1\fs24 \cf0 \
+			
+\f0\fs18 switch(unicode,\'ca
+\f1\fs24 \
+			
+\f0\fs18 63234, \{ if(index != 0, \{ listviews[index-1].focus \}) \},\'ca
+\f1\fs24 \
+			
+\f0\fs18 63235, \{ if(index != (listviews.size-1) and:\{listviews[index+1].items.notNil\},\'ca
+\f1\fs24 \
+							
+\f0\fs18 \{ try\{ listviews[index+1].value_(-1).valueAction_(0).focus \} \}) \},
+\f1\fs24 \
+			
+\f0\fs18 13, \{ \cf3 // Hit RETURN to open source or helpfile
+\f1\fs24 \cf0 \
+				
+\f0\fs18 \cf3 // The class name, or helpfile name we're after
+\f1\fs24 \cf0 \
+				
+\f0\fs18 node = selecteditem;
+\f1\fs24 \
+				
+\f0\fs18 switch(lv.items[lv.value][2..],\'ca
+\f1\fs24 \
+					
+\f0\fs18 \cf4 "Help"\cf0 , \'ca \{ \{ node.openHelpFile \}.defer; \},\'ca
+\f1\fs24 \
+					
+\f0\fs18 \cf4 "Source"\cf0 , \{ \{ node.asSymbol.asClass.openCodeFile \}.defer; \}
+\f1\fs24 \
+				
+\f0\fs18 );
+\f1\fs24 \
+			
+\f0\fs18 \},
+\f1\fs24 \
+			
+\f0\fs18 \cf3 //default:
+\f1\fs24 \cf0 \
+			
+\f0\fs18 \{\'ca
+\f1\fs24 \
+				
+\f0\fs18 \cf3 // Returning nil is supposed to be sufficient to trigger the default action,
+\f1\fs24 \cf0 \
+				
+\f0\fs18 \cf3 // but on my SC this doesn't happen.
+\f1\fs24 \cf0 \
+				
+\f0\fs18 view.defaultKeyDownAction(char,modifiers,unicode);
+\f1\fs24 \
+			
+\f0\fs18 \});
+\f1\fs24 \
+		
+\f0\fs18 \})
+\f1\fs24 \
+		
+\f0\fs18 .mouseDownAction_(\{
+\f1\fs24 \
+				
+\f0\fs18 \cf3 // The class name, or helpfile name we're after
+\f1\fs24 \cf0 \
+				
+\f0\fs18 node = selecteditem;
+\f1\fs24 \
+				
+\f0\fs18 switch(lv.items[lv.value][2..],\'ca
+\f1\fs24 \
+					
+\f0\fs18 \cf4 "Help"\cf0 , \'ca \{ \{ node.openHelpFile \}.defer; \},\'ca
+\f1\fs24 \
+					
+\f0\fs18 \cf4 "Source"\cf0 , \{ \{ node.asSymbol.asClass.openCodeFile \}.defer; \}
+\f1\fs24 \
+				
+\f0\fs18 );
+\f1\fs24 \
+		
+\f0\fs18 \});
+\f1\fs24 \
+	
+\f0\fs18 \});
+\f1\fs24 \
+	\
+	
+\f0\fs18 win.front;
+\f1\fs24 \
+	
+\f0\fs18 listviews[0].focus;
+\f1\fs24 \
+
+\f0\fs18 \} \cf3 // end *gui
+\f1\fs24 \cf0 \
+}

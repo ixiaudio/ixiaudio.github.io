@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>-- ixi lang --</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	
+	<script language="JavaScript" type="text/javascript">
+  		function checkReturn(evt) {
+			var evt  = (evt) ? evt : ((event) ? event : null);
+			var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+			if ((evt.keyCode == 13) && (node.type=="text")) {return false;}
+  		}
+  document.onkeypress = checkReturn;
+</script>
+
+</head>
+
+<body>
+
+  <form action="http://www.ixi-audio.net/cgi-bin/XiiQuarksDownload.pl" method="POST">
+  <input type="hidden" name="subject" value="[ixi quarks] user" />
+  <input type="hidden" name="recipient" value="ixi" />
+  <input type="hidden" name="redirect" value="http://www.ixi-audio.net/ixiquarks/thanks.html" />
+  
+    <table>
+  	<td width="230"><img src="http://www.ixi-audio.net/content/images/pix.gif" width="230" height="1"></td>
+	  <td width="500">
+	  
+	   
+        <!--               THE TITLE                 -->
+        <p><img src="1.gif" width="500" height="1" /></p>
+        <p><strong><font size="3">-- ixi quarks --</font></strong></p> 
+        <p>The development of ixi quarks is part of a research involving 
+          human-machine interaction, the philosophy of technology and the culture 
+          of software use in music. In return for this free software we would like 
+          to ask you few questions regarding your experience of the software. 
+          You might be sent a link to a small questionnaire at a later date, or, alternatively,
+          we would also be interested in your feedback in 
+          <a href="http://www.ixi-audio.net/content/download/ixiquarks/survey" target="_blank">this survey</a>.
+         </p>
+        <p>When you have submitted this form, you will be passed to a page containing
+        a link to the ixi quarks download.
+        </p>
+
+		  
+		 
+	
+  <!--               PERSONAL DETAILS                 -->
+        <p>_____________________________________________________________________________ 
+          <br>
+        </p>
+        <p><br>
+        </p>
+        <p><strong><font color="#006699">Personal Details</font></strong></p>
+  
+
+  
+  <table>
+    <tr> 
+      <td width="250" height="26">Name</td>
+      <td width="320"><input type="text" name="name" size="40" /></td>
+    </tr>
+    <tr> 
+      <td height="32">e-mail (optional)</td>
+      <td><input type="text" name="email" size="40" /></td>
+    </tr>
+    <tr> 
+      <td height="32">Location</td>
+      <td><input type="text" name="nationality" size="40" /></td>
+    </tr>
+	<tr> 
+      <td height="32">Project website</td>
+      <td><input type="text" name="project_website" size="40" /></td>
+    </tr>
+	<tr> 
+      <td height="32">Where did you hear about the ixi quarks?</td>
+      <td><input type="text" name="where_hear_about_survey" size="40" /></td>
+    </tr>
+ </table>
+
+ <table>    
+       <tr> 
+      <td width="540"  height="42">Any other comments?</td>
+    </tr>
+    <tr> 
+      <td> <textarea name="comments_on_ixi_lang" cols="73" rows="6" onfocus="if(this.value=='other comments')this.value='';"></textarea> 
+      </td>
+    </tr>
+ </table>
+ 
+  <p>&nbsp;</p>
+  
+  <!-- THE SUBMIT BUTTON -->
+  <center>
+  <table>
+    <tr> 
+      <td colspan="2"><input type="submit"  text="submit"/></td>
+    </tr>
+  </table>  
+  </center>
+  
+</form>
+<p><p>
+
+</body>
+</html>

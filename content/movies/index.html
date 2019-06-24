@@ -1,0 +1,130 @@
+
+// OSC pactch built to receive messages from ixi Picker [beta 0.3b]
+// www.ixi-software.net/alpha/picker
+(
+var picker1, p1state, bamAmp1, p1red, p1green, p1blue, p1x, p1y;
+var picker2, p2state, bamAmp2, p2red, p2green, p2blue, p2x, p2y;
+var picker3, p3state, bamAmp3, p3red, p3green, p3blue, p3x, p3y;
+var picker4, p4state, bamAmp4, p4red, p4green, p4blue, p4x, p4y;
+var snd, sndAmp, sndPitch, sndOnOff;
+
+snd = SoundFile.new;								//create a new SoundFile object
+snd.read(":Sounds:floating_1");		
+
+OSCPort.closeAll;
+n = OSCNode.tree([								//set up the address space
+	[\picker1, [
+		[\state, {arg node,val; p1state.source = val}], // picker active - toggle
+		[\amplitude, {arg node,val; bamAmp1.source = val}],
+		[\red, {arg node,val; p1red.source = val}],
+		[\green, {arg node, val; p1green.source = val}],
+		[\blue, {arg node, val; p1blue.source = val}],
+		[\xaxis, {arg node, val; p1x.source = val}],
+		[\yaxis, {arg node, val; p1y.source = val}],
+		[\bang, {arg node, val; "received bang p1".postln;}]
+	]],
+	[\picker2, [
+		[\state, {arg node,val; p2state.source = val}],
+		[\amplitude, {arg node,val; bamAmp2.source = val}],
+		[\red, {arg node,val; p2red.source = val}],
+		[\green, {arg node, val; p2green.source = val}],
+		[\blue, {arg node, val; p2blue.source = val}],
+		[\xaxis, {arg node, val; p2x.source = val}],
+		[\yaxis, {arg node, val; p2y.source = val}],
+
+		[\bang, {arg node, val; "received bang p2".postln;}]
+	]],
+	[\picker3, [
+		[\state, {arg node,val; p3state.source = val}],
+		[\amplitude, {arg node,val; bamAmp3.source = val}],
+		[\red, {arg node,val; p3red.source = val}],
+		[\green, {arg node, val; p3green.source = val}],
+		[\blue, {arg node, val; p3blue.source = val}],
+		[\xaxis, {arg node, val; p3x.source = val}],
+		[\yaxis, {arg node, val; p3y.source = val}],
+		[\bang, {arg node, val; "received bang p3".postln;}]
+	]],
+	[\picker4, [
+		[\state, {arg node,val; p4state.source = val}],
+		[\amplitude, {arg node,val; bamAmp4.source = val}],
+		[\red, {arg node,val; p4red.source = val}],
+		[\green, {arg node, val; p4green.source = val}],
+		[\blue, {arg node, val; p4blue.source = val}],
+		[\xaxis, {arg node, val; p4x.source = val}],
+		[\yaxis, {arg node, val; p4y.source = val}],
+		[\bang, {arg node, val; "received bang p4".postln;}]
+	]],
+	[\sound, [
+		[\amplitude, {arg node,val; sndAmp.source = val}],
+		[\pitch, {arg node,val; sndPitch.source = val}],
+		[\onoff, {arg node,val; sndOnOff.source = val}]
+	]]
+]);
+OSCInPort(9000,n);								//receiving
+o = OSCOutPort(9000,"127.0.0.1");				//sending
+
+Synth.play({
+	// ******   the plugs for the incoming OSC  ********
+	// picker 1
+	p1state = Plug.kr(0);
+	bamAmp1 = Plug.kr(0.25); // inside is default value
+	p1red = Plug.kr(2);
+	p1green = Plug.kr(2);
+	p1blue = Plug.kr(2);
+	p1x = Plug.kr(2);
+	p1y = Plug.kr(2);
+	// picker 2
+	p2state = Plug.kr(0);
+	bamAmp2 = Plug.kr(0.25); 
+	p2red = Plug.kr(2);
+	p2green = Plug.kr(2);
+	p2blue = Plug.kr(2);
+	p2x = Plug.kr(2);
+	p2y = Plug.kr(2);
+	// picker 3
+	p3state = Plug.kr(0);
+	bamAmp3 = Plug.kr(0.25); // inside is default value
+	p3red = Plug.kr(2);
+	p3green = Plug.kr(2);
+	p3blue = Plug.kr(2);
+	p3x = Plug.kr(2);
+	p3y = Plug.kr(2);
+	// picker 4
+	p4state = Plug.kr(0);
+	bamAmp4 = Plug.kr(0.25); 
+	p4red = Plug.kr(2);
+	p4green = Plug.kr(2);
+	p4blue = Plug.kr(2);
+	p4x = Plug.kr(2);
+	p4y = Plug.kr(2);
+	// sound
+	sndAmp = Plug.kr(0.1);
+	sndPitch = Plug.kr(1);
+	sndOnOff = Plug.kr(0);
+	
+	// ******   the SOUND engine  ********
+	Pause.ar( // picker 1
+	{SinOsc.ar(p1red ,0,bamAmp1)},  // plain sine wave
+	p1state)
+     +
+     Pause.ar( // picker 2
+     {SinOsc.ar(p2red * Saw.ar(p2y/100),0,bamAmp2)},  // whatsup?
+     p2state)
+     +
+     Pause.ar( // picker 3
+     {SinOsc.ar(p3red * LFNoise0.ar(p3y,p3x),0,bamAmp3)}, // eh?
+     p3state)
+     +
+     Pause.ar( // picker 4
+     {Formant.ar(p4red,p4y,p4x)},  // a formant
+     p4state)
+     +
+     Pause.ar({PlayBuf.ar(	// whatever picker you like (not used here)								
+	snd.data.at(0),	
+	snd.sampleRate,
+	sndPitch)},
+	sndOnOff * sndAmp // vol into plug onOff.
+	)
+})
+)
+

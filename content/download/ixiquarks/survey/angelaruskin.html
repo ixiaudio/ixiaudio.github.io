@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>User Feedback on ixiQuarks</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	
+	<script language="JavaScript" type="text/javascript">
+  		function checkReturn(evt) {
+			var evt  = (evt) ? evt : ((event) ? event : null);
+			var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+			if ((evt.keyCode == 13) && (node.type=="text")) {return false;}
+  		}
+  document.onkeypress = checkReturn;
+</script>
+
+</head>
+
+<body>
+
+  <form action="http://www.ixi-audio.net/cgi-bin/XQuarksSurvey.pl" method="POST">
+  <input type="hidden" name="subject" value="[ixiQuarks] Angela Ruskin survey" />
+  <input type="hidden" name="recipient" value="ixi" />
+  <input type="hidden" name="redirect" value="http://www.ixi-audio.net/survey/thanks.html" />
+  
+    <table>
+  	<td width="230"><img src="1.gif" width="230" height="1"></td>
+	  <td width="600">
+	  
+	   
+        <!--               THE TITLE                 -->
+        <p><img src="1.gif" width="600" height="1" /></p>
+        <p><strong><font size="3">User Feedback on ixiQuarks</font></strong></p> 
+        <p>
+        Dear people at Anglia Ruskin. I was happy to hear from Julio d'Escrivan that
+        you had been using ixiQuarks as part of your studies. I, Thor Magnusson, the developer
+        of the software, am finishing my PhD thesis these days and would love to ask you a few
+        questions regarding how you use the software (or not).
+        </p>
+        
+        <p>
+        I would be delighted if you would take a few minutes to reply to this questionnaire.
+        Even if you hate the guts of this software, let me know. (I won't come after you). 
+        User feedback will only make the software better and I will be releasing lots of new
+        stuff in the spring, so your comments will help me to make better software.
+        </p>
+        
+        <p>You <strong>don't need</strong> to answer all the sections. However, 
+          we would like to have as much details as possible. </p>
+		  
+		 
+
+		 
+	
+  <!--               PERSONAL DETAILS                 -->
+        <p>_____________________________________________________________________________ 
+          <br>
+        </p>
+        <p><br>
+        </p>
+        <p><strong><font color="#006699">Personal details</font></strong></p>
+  
+
+  
+  <table>
+    <tr> 
+      <td width="220" height="26">Name (optional)</td>
+      <td width="320"><input type="text" name="name" size="35" /></td>
+    </tr>
+    <tr> 
+      <td height="32">Email (optional)</td>
+      <td><input type="text" name="email" size="35" /></td>
+    </tr>
+    <tr> 
+      <td height="32">Nationality</td>
+      <td><input type="text" name="nationality" size="35" /></td>
+    </tr>
+    <tr> 
+      <td height="32">Gender</td>
+      <td><input type="text" name="gender" size="35" /></td>
+    </tr>
+    <tr> 
+      <td height="32">Age</td>
+      <td><input type="text" name="age" size="35" /></td>
+    </tr>
+    <tr> 
+    <td height="32">Profession/vocation</td>
+      <td><input type="text" name="profession" size="35" /></td>
+    </tr>
+    <tr> 
+      <td height="32">Academic institution (if any)</td>
+      <td><input type="text" name="institution" size="35" /></td>
+    </tr>
+    <tr> 
+      <td height="32">Location</td>
+      <td><input type="text" name="location" size="35" /></td>
+    </tr>
+	<tr> 
+      <td height="32">Project website (optional)</td>
+      <td><input type="text" name="project_website" size="35" /></td>
+    </tr>    
+  </table>
+        <p><br>
+          <!--               MUSICAL KNOWLEDGE                 -->
+          _____________________________________________________________________________ 
+          <br>
+        </p>
+        <p><br>
+        </p>
+        <p><strong><font color="#006699">Musical knowledge</font></strong></p>
+  
+  
+  <table>
+    <tr> 
+      <td width="540"  height="32">How would you define yourself? (select as many 
+        as you want) </td>
+    </tr>
+    <tr> 
+      <td> <input name="musician" type="checkbox" id="musician" value="musician" />
+        Musician </td>
+    </tr>
+    <tr> 
+      <td> <input name="composer" type="checkbox" id="composer" value="composer" />
+        Composer </td>
+    </tr>
+    <tr> 
+      <td> <input name="designer" type="checkbox" id="designer" value="designer" />
+        Designer </td>
+    </tr>
+    <tr> 
+      <td> <input name="engineer" type="checkbox" id="engineer" value="engineer" />
+        Engineer </td>
+    </tr>
+    <tr> 
+      <td> <input name="artist" type="checkbox" id="artist" value="artist" />
+        Artist </td>
+    </tr>
+    <tr> 
+      <td height="32"> <input name="other_definition" type="text" onfocus="if(this.value=='Email')this.value='';" value="Other" size="25" /> 
+      </td>
+    </tr>
+  </table>
+  <table height="156">
+    <tr> 
+      <td width="320" height="26">How long have you been making music?</td>
+      <td width="120"><input type="text" name="time_in_music" size="25" /></td>
+    </tr>
+    <tr> 
+            <td height="32">Do you have a musical background? (if so what kind? 
+              Years?)</td>
+      <td><input type="text" name="musical_education" size="25" /></td>
+    </tr>
+
+    <tr> 
+            <td height="32">What instrument(s) do you play? Years playing?</td>
+      <td><input type="text" name="instrument_play_years" size="25" /></td>
+    </tr>
+
+	    <tr> 
+            <td height="32">How much time every week do you spend playing/composing?</td>
+      <td><input type="text" name="time_week_playing_composing" size="25" /></td>
+    </tr>
+
+
+    <tr> 
+      <td height="32">How long have you used computers in your music?</td>
+      <td><input type="text" name="time_using_computers_in_music" size="25" /></td>
+    </tr>
+    <tr> 
+      <td height="42">How would you (or others) describe your music? (as in genre)</td>
+      <td><input type="text" name="genre" size="25" /></td>
+    </tr>
+    <tr> 
+  </table>
+        <p>
+          <!--               GENERAL QUESTIONS ON IXI QUARKS                 -->
+          _____________________________________________________________________________ 
+          <br>
+        </p>
+        <p><br>
+        </p>
+        <p><strong><font color="#006699">General Questions on the ixiQuarks</font></strong></p>
+  
+  
+  
+    <br>
+        Here we ask about your rating of the ixiQuarks as a system. Rate it from 
+        1 (bad) to 7 (good) or click the NA (no answer) radio box.<br>
+        <br>
+  <table>
+          <tr bgcolor="#CCCCCC"> 
+            <td width="190" height="19"> - System Speed</td>
+            <td width="300"> 
+			bad - 
+        <input name="q1" type="radio" id="system_speed_1" value="system_speed_1" />  
+	  	<input name="q1" type="radio" id="system_speed_2" value="system_speed_2" />
+	  	<input name="q1" type="radio" id="system_speed_3" value="system_speed_3" />
+	  	<input name="q1" type="radio" id="system_speed_4" value="system_speed_4" />
+        <input name="q1" type="radio" id="system_speed_5" value="system_speed_5" />  
+	  	<input name="q1" type="radio" id="system_speed_6" value="system_speed_6" />
+	  	<input name="q1" type="radio" id="system_speed_7" value="system_speed_7" />
+		- good
+	  </td>
+	        <td width="100" height="19"> 
+	  	<input name="q1" type="radio" id="system_speed_NA" value="system_speed_NA" /> NA
+			</td>
+    </tr>
+	<tr>
+            <td> - System Reliability</td>
+	  <td width="300"> 
+			bad - 
+        <input name="q2" type="radio" id="system_reliability_1" value="system_reliability_1" />  
+	  	<input name="q2" type="radio" id="system_reliability_2" value="system_reliability_2" />
+	  	<input name="q2" type="radio" id="system_reliability_3" value="system_reliability_3" />
+	  	<input name="q2" type="radio" id="system_reliability_4" value="system_reliability_4" />
+        <input name="q2" type="radio" id="system_reliability_5" value="system_reliability_5" />  
+	  	<input name="q2" type="radio" id="system_reliability_6" value="system_reliability_6" />
+	  	<input name="q2" type="radio" id="system_reliability_7" value="system_reliability_7" />
+		- good
+	  </td>
+	        <td width="100" height="19"> 
+	  	<input name="q2" type="radio" id="system_reliability_NA" value="system_reliability_NA" /> NA
+			</td>
+    </tr>
+          <tr bgcolor="#CCCCCC"> 
+            <td> - Consistency</td>
+	        <td width="300"> 
+			bad - 
+        <input name="q3" type="radio" id="consistency_1" value="consistency_1" />  
+	  	<input name="q3" type="radio" id="consistency_2" value="consistency_2" />
+	  	<input name="q3" type="radio" id="consistency_3" value="consistency_3" />
+	  	<input name="q3" type="radio" id="consistency_4" value="consistency_4" />
+        <input name="q3" type="radio" id="consistency_5" value="consistency_5" />  
+	  	<input name="q3" type="radio" id="consistency_6" value="consistency_6" />
+	  	<input name="q3" type="radio" id="consistency_7" value="consistency_7" />
+		- good
+	  </td>
+	        <td width="100" height="19"> 
+	  	<input name="q3" type="radio" id="consistency_NA" value="consistency_NA" /> NA
+			</td>
+	</tr>
+	<tr>
+            <td> - Help and documentation</td>
+	<td width="300"> 
+			bad - 
+        <input name="q4" type="radio" id="help_doc_1" value="help_doc_1" />  
+	  	<input name="q4" type="radio" id="help_doc_2" value="help_doc_2" />
+	  	<input name="q4" type="radio" id="help_doc_3" value="help_doc_3" />
+	  	<input name="q4" type="radio" id="help_doc_4" value="help_doc_4" />
+        <input name="q4" type="radio" id="help_doc_5" value="help_doc_5" />  
+	  	<input name="q4" type="radio" id="help_doc_6" value="help_doc_6" />
+	  	<input name="q4" type="radio" id="help_doc_7" value="help_doc_7" />
+		- good
+	  </td>
+	        <td width="100" height="19"> 
+	  	<input name="q4" type="radio" id="help_doc_NA" value="help_doc_NA" /> NA
+			</td>
+    </tr>
+          <tr bgcolor="#CCCCCC"> 
+            <td> - Originality in Design</td>
+	        <td width="300"> 
+			bad - 
+        <input name="q5" type="radio" id="orginality_in_design_1" value="orginality_in_design_1" />  
+	  	<input name="q5" type="radio" id="orginality_in_design_2" value="orginality_in_design_2" />
+	  	<input name="q5" type="radio" id="orginality_in_design_3" value="orginality_in_design_3" />
+	  	<input name="q5" type="radio" id="orginality_in_design_4" value="orginality_in_design_4" />
+        <input name="q5" type="radio" id="orginality_in_design_5" value="orginality_in_design_5" />  
+	  	<input name="q5" type="radio" id="orginality_in_design_6" value="orginality_in_design_6" />
+	  	<input name="q5" type="radio" id="orginality_in_design_7" value="orginality_in_design_7" />
+		- good
+	  </td>
+	        <td width="100" height="19"> 
+	  	<input name="q5" type="radio" id="orginality_in_design_NA" value="orginality_in_design_NA" /> NA
+			</td>
+	</tr>
+	<tr>
+            <td> - Musical Output</td>
+	<td width="300"> 
+			bad - 
+        <input name="q6" type="radio" id="musical_output_1" value="musical_output_1" />  
+	  	<input name="q6" type="radio" id="musical_output_2" value="musical_output_2" />
+	  	<input name="q6" type="radio" id="musical_output_3" value="musical_output_3" />
+	  	<input name="q6" type="radio" id="musical_output_4" value="musical_output_4" />
+        <input name="q6" type="radio" id="musical_output_5" value="musical_output_5" />  
+	  	<input name="q6" type="radio" id="musical_output_6" value="musical_output_6" />
+	  	<input name="q6" type="radio" id="musical_output_7" value="musical_output_7" />
+		- good
+	  </td>
+	        <td width="100" height="19"> 
+	  	<input name="q6" type="radio" id="musical_output_NA" value="musical_output_NA" /> NA
+			</td>
+    </tr>
+
+          <tr bgcolor="#CCCCCC"> 
+            <td> - Sound Quality</td>
+			<td width="300"> 
+			bad - 
+        <input name="q7" type="radio" id="sound_quality_1" value="sound_quality_1" />  
+	  	<input name="q7" type="radio" id="sound_quality_2" value="sound_quality_2" />
+	  	<input name="q7" type="radio" id="sound_quality_3" value="sound_quality_3" />
+	  	<input name="q7" type="radio" id="sound_quality_4" value="sound_quality_4" />
+        <input name="q7" type="radio" id="sound_quality_5" value="sound_quality_5" />  
+	  	<input name="q7" type="radio" id="sound_quality_6" value="sound_quality_6" />
+	  	<input name="q7" type="radio" id="sound_quality_7" value="sound_quality_7" />
+		- good
+	  </td>
+	        <td width="100" height="19"> 
+	  	<input name="q7" type="radio" id="sound_quality_NA" value="sound_quality_NA" /> NA
+			</td>
+	</tr>
+	
+  </table>
+  
+  
+  
+  
+  
+  
+  <!--               EXPERIENCE WHEN USING IXI QUARKS                 -->
+  
+        <p>_____________________________________________________________________________ 
+          <br>
+        </p>
+        <p><br>
+        </p>
+        <p><strong><font color="#006699">Experience when using the ixiQuarks</font></strong></p>
+  
+  
+  
+    <br>
+        We are interested in the experential (emotional) reaction when using ixiQuarks. 
+        Rate it from 1 (on the left) to 7 (right) or click the NA (no answer) 
+        radio box.<br>
+        <br>
+  <table>
+          <tr bgcolor="#CCCCCC"> 
+            <td width="140" height="19" align="right"> terrible </td>
+            <td width="270" align="center"> 
+              <input name="q8" type="radio" id="terrible_wonderful_1" value="terrible_wonderful_1" /> 
+              <input name="q8" type="radio" id="terrible_wonderful_2" value="terrible_wonderful_2" /> 
+              <input name="q8" type="radio" id="terrible_wonderful_3" value="terrible_wonderful_3" /> 
+              <input name="q8" type="radio" id="terrible_wonderful_4" value="terrible_wonderful_4" /> 
+              <input name="q8" type="radio" id="terrible_wonderful_5" value="terrible_wonderful_5" /> 
+              <input name="q8" type="radio" id="terrible_wonderful_6" value="terrible_wonderful_6" /> 
+              <input name="q8" type="radio" id="terrible_wonderful_7" value="terrible_wonderful_7" />
+	  		</td>
+	        <td width="140" height="19"> wonderful </td>
+	        <td width="100" height="19"> 
+	  	<input name="q8" type="radio" id="terrible_wonderful_NA" value="terrible_wonderful_NA" /> NA
+			</td>
+    	</tr>
+          <tr bgcolor="#FFFFFF"> 
+            <td width="140" height="19" align="right"> difficult</td>
+            <td width="270" align="center"> 
+              <input name="q9" type="radio" id="difficult_easy_1" value="difficult_easy_1" /> 
+              <input name="q9" type="radio" id="difficult_easy_2" value="difficult_easy_2" /> 
+              <input name="q9" type="radio" id="difficult_easy_3" value="difficult_easy_3" /> 
+              <input name="q9" type="radio" id="difficult_easy_4" value="difficult_easy_4" /> 
+              <input name="q9" type="radio" id="difficult_easy_5" value="difficult_easy_5" /> 
+              <input name="q9" type="radio" id="difficult_easy_6" value="difficult_easy_6" /> 
+              <input name="q9" type="radio" id="difficult_easy_7" value="difficult_easy_7" />
+	  		</td>
+	        <td width="140" height="19"> easy</td>
+	        <td width="100" height="19"> 
+	  	<input name="q9" type="radio" id="difficult_easy_NA" value="difficult_easy_NA" /> NA
+			</td>
+    	</tr>
+          <tr bgcolor="#CCCCCC"> 
+            <td width="140" height="19" align="right"> frustrating</td>
+            <td width="270" align="center"> 
+              <input name="q10" type="radio" id="frustrating_satisfying_1" value="frustrating_satisfying_1" /> 
+              <input name="q10" type="radio" id="frustrating_satisfying_2" value="frustrating_satisfying_2" /> 
+              <input name="q10" type="radio" id="frustrating_satisfying_3" value="frustrating_satisfying_3" /> 
+              <input name="q10" type="radio" id="frustrating_satisfying_4" value="frustrating_satisfying_4" /> 
+              <input name="q10" type="radio" id="frustrating_satisfying_5" value="frustrating_satisfying_5" /> 
+              <input name="q10" type="radio" id="frustrating_satisfying_6" value="frustrating_satisfying_6" /> 
+              <input name="q10" type="radio" id="frustrating_satisfying_7" value="frustrating_satisfying_7" />
+	  		</td>
+	        <td width="140" height="19"> satisfying</td>
+	        <td width="100" height="19"> 
+	  	<input name="q10" type="radio" id="frustrating_satisfying_NA" value="frustrating_satisfying_NA" /> NA
+			</td>
+    	</tr>
+          <tr bgcolor="#FFFFFF"> 
+            <td width="140" height="19" align="right"> inadequate power</td>
+            <td width="270" align="center"> 
+              <input name="q11" type="radio" id="inadequate_adequate_1" value="inadequate_adequate_1" /> 
+              <input name="q11" type="radio" id="inadequate_adequate_2" value="inadequate_adequate_2" /> 
+              <input name="q11" type="radio" id="inadequate_adequate_3" value="inadequate_adequate_3" /> 
+              <input name="q11" type="radio" id="inadequate_adequate_4" value="inadequate_adequate_4" /> 
+              <input name="q11" type="radio" id="inadequate_adequate_5" value="inadequate_adequate_5" /> 
+              <input name="q11" type="radio" id="inadequate_adequate_6" value="inadequate_adequate_6" /> 
+              <input name="q11" type="radio" id="inadequate_adequate_7" value="inadequate_adequate_7" />
+	  		</td>
+	        <td width="140" height="19"> adequate power</td>
+	        <td width="100" height="19"> 
+	  	<input name="q11" type="radio" id="inadequate_adequate_NA" value="inadequate_adequate_NA" /> NA
+			</td>
+    	</tr>
+          <tr bgcolor="#CCCCCC"> 
+            <td width="140" height="19" align="right"> dull</td>
+            <td width="270" align="center"> 
+              <input name="q12" type="radio" id="dull_stimulating_1" value="dull_stimulating_1" /> 
+              <input name="q12" type="radio" id="dull_stimulating_2" value="dull_stimulating_2" /> 
+              <input name="q12" type="radio" id="dull_stimulating_3" value="dull_stimulating_3" /> 
+              <input name="q12" type="radio" id="dull_stimulating_4" value="dull_stimulating_4" /> 
+              <input name="q12" type="radio" id="dull_stimulating_5" value="dull_stimulating_5" /> 
+              <input name="q12" type="radio" id="dull_stimulating_6" value="dull_stimulating_6" /> 
+              <input name="q12" type="radio" id="dull_stimulating_7" value="dull_stimulating_7" />
+	  		</td>
+	        <td width="140" height="19"> stimulating</td>
+	        <td width="100" height="19"> 
+	  	<input name="q12" type="radio" id="dull_stimulating_NA" value="dull_stimulating_NA" /> NA
+			</td>
+    	</tr>
+	          <tr bgcolor="#FFFFFF"> 
+            <td width="140" height="19" align="right"> rigid</td>
+            <td width="270" align="center"> 
+              <input name="q13" type="radio" id="rigid_flexible_1" value="rigid_flexible_1" /> 
+              <input name="q13" type="radio" id="rigid_flexible_2" value="rigid_flexible_2" /> 
+              <input name="q13" type="radio" id="rigid_flexible_3" value="rigid_flexible_3" /> 
+              <input name="q13" type="radio" id="rigid_flexible_4" value="rigid_flexible_4" /> 
+              <input name="q13" type="radio" id="rigid_flexible_5" value="rigid_flexible_5" /> 
+              <input name="q13" type="radio" id="rigid_flexible_6" value="rigid_flexible_6" /> 
+              <input name="q13" type="radio" id="rigid_flexible_7" value="rigid_flexible_7" />
+	  		</td>
+	        <td width="140" height="19"> flexible</td>
+	        <td width="100" height="19"> 
+	  	<input name="q13" type="radio" id="rigid_flexible_NA" value="rigid_flexible_NA" /> NA
+			</td>
+    	</tr>
+          <tr bgcolor="#CCCCCC"> 
+            <td width="140" height="19" align="right"> difficult to learn</td>
+            <td width="270" align="center"> 
+              <input name="q14" type="radio" id="difficult_easy_learn_1" value="difficult_easy_learn_1" /> 
+              <input name="q14" type="radio" id="difficult_easy_learn_2" value="difficult_easy_learn_2" /> 
+              <input name="q14" type="radio" id="difficult_easy_learn_3" value="difficult_easy_learn_3" /> 
+              <input name="q14" type="radio" id="difficult_easy_learn_4" value="difficult_easy_learn_4" /> 
+              <input name="q14" type="radio" id="difficult_easy_learn_5" value="difficult_easy_learn_5" /> 
+              <input name="q14" type="radio" id="difficult_easy_learn_6" value="difficult_easy_learn_6" /> 
+              <input name="q14" type="radio" id="difficult_easy_learn_7" value="difficult_easy_learn_7" />
+	  		</td>
+	        <td width="140" height="19"> easy to learn</td>
+	        <td width="100" height="19"> 
+	  	<input name="q14" type="radio" id="difficult_easy_learn_NA" value="difficult_easy_learn_NA" /> NA
+			</td>
+    	</tr>
+          <tr bgcolor="#FFFFFF"> 
+            <td width="140" height="19" align="right"> difficult to operate</td>
+            <td width="270" align="center"> 
+              <input name="q15" type="radio" id="difficult_easy_operate_1" value="difficult_easy_operate_1" /> 
+              <input name="q15" type="radio" id="difficult_easy_operate_2" value="difficult_easy_operate_2" /> 
+              <input name="q15" type="radio" id="difficult_easy_operate_3" value="difficult_easy_operate_3" /> 
+              <input name="q15" type="radio" id="difficult_easy_operate_4" value="difficult_easy_operate_4" /> 
+              <input name="q15" type="radio" id="difficult_easy_operate_5" value="difficult_easy_operate_5" /> 
+              <input name="q15" type="radio" id="difficult_easy_operate_6" value="difficult_easy_operate_6" /> 
+              <input name="q15" type="radio" id="difficult_easy_operate_7" value="difficult_easy_operate_7" />
+	  		</td>
+	        <td width="140" height="19"> easy to operate</td>
+	        <td width="100" height="19"> 
+	  	<input name="q15" type="radio" id="difficult_easy_operate_NA" value="difficult_easy_operate_NA" /> NA
+			</td>
+    	</tr>
+          <tr bgcolor="#CCCCCC"> 
+            <td width="140" height="19" align="right">difficult to understand</td>
+            <td width="270" align="center"> 
+              <input name="q16" type="radio" id="difficult_easy_understand_1" value="difficult_easy_understand_1" /> 
+              <input name="q16" type="radio" id="difficult_easy_understand_2" value="difficult_easy_understand_2" /> 
+              <input name="q16" type="radio" id="difficult_easy_understand_3" value="difficult_easy_understand_3" /> 
+              <input name="q16" type="radio" id="difficult_easy_understand_4" value="difficult_easy_understand_4" /> 
+              <input name="q16" type="radio" id="difficult_easy_understand_5" value="difficult_easy_understand_5" /> 
+              <input name="q16" type="radio" id="difficult_easy_understand_6" value="difficult_easy_understand_6" /> 
+              <input name="q16" type="radio" id="difficult_easy_understand_7" value="difficult_easy_understand_7" />
+	  		</td>
+	        <td width="140" height="19"> easy to understand</td>
+	        <td width="100" height="19"> 
+	  	<input name="q16" type="radio" id="difficult_easy_understand_NA" value="difficult_easy_understand_NA" /> NA
+			</td>
+    	</tr>
+
+  </table>
+  <p>
+  
+      
+  
+  
+  <!--               DISCURSIVE QUESTIONS                 -->
+  
+    <center>
+          ______________________________________________________________________________________        
+          ______________________________________________________________________________________        
+		  </center>
+<p>
+  <br><br>
+  </p>
+        <p><strong><font color="#006699">Discursive Questions</font></strong></p>
+  
+  
+  <table>
+     <tr> 
+            <td width="540"  height="32">Roughly how often have you used ixiQuarks? 
+              Do you use it regularly? Where does it fit in your workflow? In 
+              what context? (live, studio) Do you use it with other software? 
+              If so, how?</td>
+    </tr>
+    <tr> 
+      <td> <textarea name="often_use_ixiQ_where" cols="73" rows="6" onfocus="if(this.value=='instruments')this.value='';"></textarea> 
+      </td>
+    </tr>
+
+
+   <tr>
+			<td width="540"  height="42">Describe your overall reaction/experience 
+              when first encountering the software.</td>
+    </tr>
+    <tr> 
+      <td><textarea name="overall_feeling" cols="73" rows="6" onfocus="if(this.value=='instruments')this.value='';"></textarea> </td>
+    </tr>
+	
+
+	<tr>
+			<td width="540"  height="42">How do the ixiQuarks relate to your studies and work with SuperCollider? Do you feel it integrates well with SuperCollider?</td>
+    </tr>
+    <tr> 
+      <td><textarea name="ixi_relatig_to_studying_SuperCollider" cols="73" rows="6" onfocus="if(this.value=='instruments')this.value='';"></textarea> </td>
+    </tr>
+
+
+	<tr>
+			<td width="540"  height="42">Do you think ixiQuarks is a useful software for learning in a course like yours?</td>
+    </tr>
+    <tr> 
+      <td><textarea name="ixi_relatig_to_studying_SuperCollider" cols="73" rows="6" onfocus="if(this.value=='instruments')this.value='';"></textarea> </td>
+    </tr>
+
+
+    <tr> 
+            <td width="540"  height="32"> Can you describe how you use ixiQuarks in the compositional process?</td>
+    </tr>
+    <tr> 
+      <td> <textarea name="ixiQ_compositional_process" cols="73" rows="6" onfocus="if(this.value=='instruments')this.value='';"></textarea> 
+      </td>
+    </tr>
+
+	
+    <tr> 
+            <td width="540"  height="32"> Does the ixiQuarks environment 
+              affect your compositional or performative patterns? Do you think differently 
+              about your music? Does the environment encourage new directions 
+              in your music? If so, how?</td>
+    </tr>
+    <tr> 
+      <td> <textarea name="ixiQ_affecting_ideas" cols="73" rows="6" onfocus="if(this.value=='instruments')this.value='';"></textarea> 
+      </td>
+    </tr>
+
+	
+
+	<tr>
+			<td width="540"  height="42">Would you say that the software is general 
+              or specific? Discuss.</td>
+    </tr>
+    <tr> 
+      <td><textarea name="general_or_specific_software" cols="73" rows="6" onfocus="if(this.value=='instruments')this.value='';"></textarea> </td>
+    </tr>
+
+	
+    <tr>
+			<td width="540"  height="42">When using the ixiQuarks, do you often 
+              find that the software does not allow you to perform certain basic 
+              musical things? What is lacking? If not, are these limitations perhaps 
+              inspiring? </td>
+    </tr>
+    <tr> 
+            <td><textarea name="frustrating_lacking" cols="73" rows="6" onfocus="if(this.value=='instruments')this.value='';"></textarea> 
+            </td>
+    </tr>
+	
+	
+	
+          <tr>
+			<td width="540"  height="42">Do you find ixiQuarks easy or difficult 
+              to understand? To what degree do you feel that your way of thinking 
+              matches that of the designers of ixiQuarks?</td>
+    </tr>
+    <tr> 
+      <td><textarea name="easy_to_understand_thinking_matches" cols="73" rows="6" onfocus="if(this.value=='instruments')this.value='';"></textarea> </td>
+    </tr>
+
+
+	
+          <tr>
+			<td width="540"  height="42">What are the main features of ixiQuarks that you enjoy?</td>
+    </tr>
+    <tr> 
+      <td><textarea name="enjoy_ixiQuarks" cols="73" rows="6" onfocus="if(this.value=='instruments')this.value='';"></textarea> </td>
+    </tr>
+
+
+	
+	
+	<tr>
+			<td width="540"  height="42">What, in your view is ixiQuarks best for?</td>
+    </tr>
+    <tr> 
+      <td><textarea name="ixiQuarks_best_for" cols="73" rows="6" onfocus="if(this.value=='instruments')this.value='';"></textarea> </td>
+    </tr>
+
+  </table>
+       
+       
+       
+       
+         <p><br>
+          <!--               OTHER                 -->
+          _____________________________________________________________________________ 
+          <br>
+        </p>
+        <p><br>
+        </p>
+        <p><strong><font color="#006699">Other...</font></strong></p>
+<table>
+    <tr> 
+      <td width="540"  height="42">Is there something lacking in the ixiQuarks? What instrument would you like to see
+	  as part of the environment? Or some protocols or hardware support?</td>
+    </tr>
+    <tr> 
+      <td> <textarea name="lacking_in_ixiQuarks" cols="73" rows="6" onfocus="if(this.value=='other comments')this.value='';"></textarea> 
+      </td>
+    </tr>
+
+    <tr> 
+      <td width="540"  height="42">Did we forget to ask a question? Have you got any other
+	  comments on the subjects we've been asking about?</td>
+    </tr>
+    <tr> 
+      <td> <textarea name="forgot_question_other_comment" cols="73" rows="6" onfocus="if(this.value=='other comments')this.value='';"></textarea> 
+      </td>
+    </tr>
+
+  </table>
+
+  <p>&nbsp;</p>
+  
+  <!-- THE SUBMIT BUTTON -->
+  
+  <table>
+    <tr> 
+      <td colspan="2"><input type="submit"  text="submit"/></td>
+    </tr>
+  </table>
+
+	</td>
+  	  <td width="*"></td>
+
+  </table>
+  
+</form>
+
+</body>
+</html>
