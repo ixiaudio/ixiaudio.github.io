@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>My Photo Gallery README</TITLE>
+	<META NAME="creator" CONTENT="Yes, I'm lazy and used an editor.">
+	<STYLE>
+	<!--
+		P.text-body-indent { margin-left: 0.2in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT SIZE=4>My Voting Script v2.1</FONT></P>
+<HR>
+<P>Please read everything but email me if<BR>(1) you do not
+understand <BR>(2) you get it running (so I can check it out and put
+up a link to your site)<BR>at <A HREF="mailto:support@fuzzymonkey.org">support@fuzzymonkey.org</A></P>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=2 BGCOLOR="#000000">
+	<TR>
+		<TD>
+			<P><FONT COLOR="#ffffff"><B>In this README: </B></FONT>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<BLOCKQUOTE><A HREF="#requires">REQUIRES</A><BR><A HREF="#summary">SUMMARY</A><BR><A HREF="#features">FEATURES</A><BR><A HREF="#license">DISTRIBUTION
+/ LICENSE</A><BR><A HREF="#installation">INSTALLATION</A><BR><A HREF="#how">HOW
+TO USE</A><BR><A HREF="#changes">CHANGES</A><BR><A HREF="#todo">TODO</A></BLOCKQUOTE>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=2 BGCOLOR="#000000">
+	<TR>
+		<TD>
+			<P><A NAME="requires"></A><FONT COLOR="#ffffff"><B>REQUIRES </B></FONT>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<UL>
+	<LI><BLOCKQUOTE STYLE="margin-bottom: 0in">1. web server (tested on
+	apache Linux/Unix but reported to work on Windows NT/2000) 
+	</BLOCKQUOTE>
+</UL>
+<UL>
+	<LI><BLOCKQUOTE STYLE="margin-bottom: 0in">2. Perl</BLOCKQUOTE>
+	<BLOCKQUOTE STYLE="margin-bottom: 0in"></BLOCKQUOTE>
+</UL>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=2 BGCOLOR="#000000">
+	<TR>
+		<TD>
+			<P><A NAME="summary"></A><FONT COLOR="#ffffff"><B>SUMMARY </B></FONT>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<BLOCKQUOTE>&ldquo;My Voting Script&rdquo; aims to provide an easy to
+use add in solution for adding voting interaction on webpages.  The
+package includes both a CGI script and an SSI for embedding into
+.shtml pages.  Both interfaces use the same config file and can be
+used exclusively or in combination.  A question and list of answers
+is entered in the config file.  The included CGI script can be a
+accessed directly to present the user with the question and list of
+options. After making a selection, a pretty bar graph is displayed
+with the results.  The included SSI script can be used to embed the
+question and answers in a smaller table within a webpage.  Clicking
+on one of the options in the SSI page shows the results in a new
+popup window.  The script has optional time based IP logging to
+prevent multiple votes from the same IP address within a specified
+window.</BLOCKQUOTE>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=2 BGCOLOR="#000000">
+	<TR>
+		<TD>
+			<P><A NAME="features"></A><FONT COLOR="#ffffff"><B>FEATURES </B></FONT>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<UL>
+	<LI><BLOCKQUOTE STYLE="margin-bottom: 0in"> Uses FuzzyMonkey.org's
+	easy to use templating scheme (explained in our articles section)</BLOCKQUOTE>
+	<LI><BLOCKQUOTE STYLE="margin-bottom: 0in"> Uses a config file so no
+	HTML knowledge is even necessary</BLOCKQUOTE>
+	<LI><BLOCKQUOTE STYLE="margin-bottom: 0in"> Uses the config file to
+	prevent unauthorized responses (people voting for things not in your
+	list of valid answers)</BLOCKQUOTE>
+</UL>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=2 BGCOLOR="#000000">
+	<TR>
+		<TD>
+			<P><A NAME="license"></A><FONT COLOR="#ffffff"><B>DISTRIBUTION /
+			LICENSE </B></FONT>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<BLOCKQUOTE>This software is released under the GPL. Please see the
+included LICENSE file. Copyright (C) 2003 Michael and Erin Spiceland
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version. This program is distributed in the
+hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+PURPOSE. See the GNU General Public License for more details. You
+should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation,
+Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA Use this
+script at your own risk! I make no warranties that it is hack proof! 
+</BLOCKQUOTE>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=2 BGCOLOR="#000000">
+	<TR>
+		<TD>
+			<P><A NAME="installation"></A><FONT COLOR="#ffffff"><B>INSTALLATION
+			</B></FONT>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<BLOCKQUOTE><BR><BR>
+</BLOCKQUOTE>
+<BLOCKQUOTE>1. Install scripts 
+</BLOCKQUOTE>
+<P CLASS="text-body-indent" STYLE="margin-left: 0.79in"><U><B>If you
+have shell access</B></U></P>
+<P CLASS="text-body-indent" STYLE="margin-left: 0.79in">ftp the
+vote*.tar.gz to your cgi-bin/ directory</P>
+<P CLASS="text-body-indent" STYLE="margin-left: 0.79in">untar it with</P>
+<P CLASS="text-body-indent" STYLE="margin-left: 0.79in">$ tar -zxvpf
+vote*.tar.gz</P>
+<P CLASS="text-body-indent" STYLE="margin-left: 0.79in">edit the
+config file, sitevariables.pl</P>
+<P CLASS="text-body-indent" STYLE="margin-left: 0.79in">$ cd vote/</P>
+<P CLASS="text-body-indent" STYLE="margin-left: 0.79in">$ pico
+sitevariables.pl (This command assumes you use pico.  Replace this
+with vi, emacs, or whatever your favorite editor is)</P>
+<P CLASS="text-body-indent" STYLE="margin-left: 0.79in">done<BR><BR><B><U><SPAN STYLE="font-style: normal">If
+you do not have shell access</SPAN></U></B></P>
+<P CLASS="text-body-indent" STYLE="margin-left: 0.79in; font-style: normal; text-decoration: none">
+Download the .zip or .tar.gz file on your computer.  Unzip or untar
+the contents.  Edit the sitevariables.pl file to your liking.  Ftp
+the entire unziped vote/ directory into the cgi-bin/ folder of your
+web account.  Now use ftp or some other method to set the permissions
+of .cgi files to 755 (chmod 755 *.cgi).  Also, you may what to verify
+that the user that your webserver runs as (normally apache or your
+username) has permissions to write to the directory containing the
+.cgi files.</P>
+<P CLASS="text-body-indent" STYLE="margin-left: 0.79in; font-style: normal; text-decoration: none">
+done</P>
+<BLOCKQUOTE>2. Customizing it</BLOCKQUOTE>
+<P CLASS="text-body-indent" STYLE="margin-left: 0.79in">Read the
+article on &ldquo;templating&rdquo; in our articles section.  It will
+show you how to edit the template.html file that is in the same
+directory as the scripts.  Just make sure you leave the tag &lt;!--
+content --&gt; as a place holder for the script content.</P>
+<BLOCKQUOTE STYLE="margin-left: 0.84in">You will also be able to edit
+the colors and such in the config file, but you saw that in the
+previous step.</BLOCKQUOTE>
+<BLOCKQUOTE>5. Your done! 
+</BLOCKQUOTE>
+<BLOCKQUOTE STYLE="margin-left: 0.79in; margin-right: 0.79in">Fire up
+your browser and point it at the index.cgi script. Good Luck! Email
+me if you use it! 
+</BLOCKQUOTE>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=2 BGCOLOR="#000000">
+	<TR>
+		<TD>
+			<P><A NAME="how"></A><FONT COLOR="#ffffff"><B>HOW TO USE </B></FONT>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<BLOCKQUOTE><BR><BR>
+</BLOCKQUOTE>
+<BLOCKQUOTE>There are two ways of using the voting script.  The
+first, is to use it like a normal CGI script.  To do that, just point
+your browser at the script like so:</BLOCKQUOTE>
+<BLOCKQUOTE>e.g.- http://www.yoursite.com/cgi-bin/vote/index.cgi</BLOCKQUOTE>
+<BLOCKQUOTE>If you get an internal server error, run it from command
+line so that you can see what is going wrong. See the FAQ in our
+articles section for more info. 
+</BLOCKQUOTE>
+<BLOCKQUOTE>The second way is to use SSI.  An SSI is a way of
+building a normal webpage using html but embedding a script in the
+middle of it.  Basically, you build a webpage like normal but name it
+.shtml instead of .html.  Then, you have a special line in the .shtml
+file that specifies the name of the script you want to execute.  The
+script gets executed and the output of the script is then placed in
+the html where you specified.  If you want to use the SSI script, it
+is called ssi.cgi.  There is an example of how to use this in the
+doc/ directory.</BLOCKQUOTE>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=2 BGCOLOR="#000000">
+	<TR>
+		<TD>
+			<P><A NAME="changes"></A><FONT COLOR="#ffffff"><B>CHANGES </B></FONT>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<BLOCKQUOTE>11.24.2003  Version 2.0.  Initial release of the completely re-written version.</BLOCKQUOTE>
+<BLOCKQUOTE>12.07.2003  Version 2.1.  Cleaned up the look and feel.  Added font options in config file to make it easier to integrate with .css or specify custom fonts.</BLOCKQUOTE>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=2 BGCOLOR="#000000">
+	<TR>
+		<TD>
+			<P><A NAME="todo"></A><FONT COLOR="#ffffff"><B>TODO </B></FONT>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<BLOCKQUOTE STYLE="margin-bottom: 0in">1. nothing unless you email
+suggestions.</BLOCKQUOTE>
+<BLOCKQUOTE STYLE="margin-bottom: 0in"><BR>
+</BLOCKQUOTE>
+<P>Send questions or comments to <A HREF="mailto:mike@fuzzymonkey.org">mike@fuzzymonkey.org</A>
+<BR><BR>Thanks,<BR>Michael and Erin<BR>FuzzyMonkey scripting wizards</P>
+</BODY>
+</HTML>

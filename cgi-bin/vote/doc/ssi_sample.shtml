@@ -1,0 +1,12 @@
+<html>
+	<head><title>Sample SSI script</title></head>
+<body style="font-family: Verdana;">
+
+<center>
+
+<!--#exec cgi="./cgi-bin/vote/ssl.cgi"-->
+
+</center> 
+
+</body>
+</html>
